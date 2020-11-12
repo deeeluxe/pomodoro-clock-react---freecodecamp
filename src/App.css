@@ -47,3 +47,7 @@ button {
 button:hover {
   cursor: pointer;
 }
+
+button:focus{
+  outline: none;
+}

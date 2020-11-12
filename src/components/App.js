@@ -11,7 +11,7 @@ class App extends React.Component {
     this.state = {
       timerMinute: 25,
       breakLength: 5,
-      sessionLength: 25,
+      sessionLength: 25
     };
     this.onDecrementBreakLength = this.onDecrementBreakLength.bind(this);
     this.onIncrementBreakLength = this.onIncrementBreakLength.bind(this);
@@ -19,6 +19,8 @@ class App extends React.Component {
     this.onDecrementSessionLength = this.onDecrementSessionLength.bind(this);
     this.onDecrementTimerMinute = this.onDecrementTimerMinute.bind(this);
     this.onSwitchToBreak = this.onSwitchToBreak.bind(this);
+    this.onReset = this.onReset.bind(this);
+    this.onSwitchToSession = this.onSwitchToSession.bind(this);
   }
 
   onDecrementBreakLength() {
@@ -59,11 +61,27 @@ class App extends React.Component {
     })
   }
 
+  onSwitchToSession() {
+    this.setState({
+      timerMinute: this.state.sessionLength
+    })
+  }
+
+  onReset() {
+    this.setState({
+      timerMinute: 25,
+      breakLength: 5,
+      sessionLength: 25
+    })
+  }
+
   render() {
     return (
       <div className="App">
         <h2>Test</h2>
         <Timer
+          reset={this.onReset}
+          switchToSession={this.onSwitchToSession}
           switchToBreak={this.onSwitchToBreak}
           timerMinute={this.state.timerMinute}
           decrementTimerMinute={this.onDecrementTimerMinute}

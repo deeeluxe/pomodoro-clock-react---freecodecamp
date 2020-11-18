@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/pomodoro-clock-react---freecodecamp/static/css/main.ae90a7b7.chunk.css",
-    "main.js": "/pomodoro-clock-react---freecodecamp/static/js/main.a7ee9c6b.chunk.js",
-    "main.js.map": "/pomodoro-clock-react---freecodecamp/static/js/main.a7ee9c6b.chunk.js.map",
+    "main.css": "/pomodoro-clock-react---freecodecamp/static/css/main.eb20ad42.chunk.css",
+    "main.js": "/pomodoro-clock-react---freecodecamp/static/js/main.b192e034.chunk.js",
+    "main.js.map": "/pomodoro-clock-react---freecodecamp/static/js/main.b192e034.chunk.js.map",
     "runtime-main.js": "/pomodoro-clock-react---freecodecamp/static/js/runtime-main.3b5f7645.js",
     "runtime-main.js.map": "/pomodoro-clock-react---freecodecamp/static/js/runtime-main.3b5f7645.js.map",
     "static/js/2.b07b95ed.chunk.js": "/pomodoro-clock-react---freecodecamp/static/js/2.b07b95ed.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.f4e8396c.chunk.js": "/pomodoro-clock-react---freecodecamp/static/js/3.f4e8396c.chunk.js",
     "static/js/3.f4e8396c.chunk.js.map": "/pomodoro-clock-react---freecodecamp/static/js/3.f4e8396c.chunk.js.map",
     "index.html": "/pomodoro-clock-react---freecodecamp/index.html",
-    "static/css/main.ae90a7b7.chunk.css.map": "/pomodoro-clock-react---freecodecamp/static/css/main.ae90a7b7.chunk.css.map",
+    "static/css/main.eb20ad42.chunk.css.map": "/pomodoro-clock-react---freecodecamp/static/css/main.eb20ad42.chunk.css.map",
     "static/js/2.b07b95ed.chunk.js.LICENSE.txt": "/pomodoro-clock-react---freecodecamp/static/js/2.b07b95ed.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.3b5f7645.js",
     "static/js/2.b07b95ed.chunk.js",
-    "static/css/main.ae90a7b7.chunk.css",
-    "static/js/main.a7ee9c6b.chunk.js"
+    "static/css/main.eb20ad42.chunk.css",
+    "static/js/main.b192e034.chunk.js"
   ]
 }

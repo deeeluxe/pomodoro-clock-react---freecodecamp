@@ -23,9 +23,9 @@ function Break(props) {
         <section>
             <p id="break-label">Break Length</p>
             <div className="breakAndSessionBox">
-                <button id="break-decrement" onClick={decrementBreakLength}>Down</button>
+                <button disabled={props.isPlaying ? "disabled" : ""} id="break-decrement" onClick={decrementBreakLength}>Down</button>
                 <p id="break-length">{props.breakLength}</p>
-                <button id="break-increment" onClick={incrementBreakLength}>Up</button>
+                <button disabled={props.isPlaying ? "disabled" : ""} id="break-increment" onClick={incrementBreakLength}>Up</button>
             </div>
         </section>
     )

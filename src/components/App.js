@@ -11,8 +11,10 @@ class App extends React.Component {
     this.state = {
       timerMinute: 25,
       breakLength: 5,
-      sessionLength: 25
+      sessionLength: 25,
+      isPlaying: false
     };
+
     this.onDecrementBreakLength = this.onDecrementBreakLength.bind(this);
     this.onIncrementBreakLength = this.onIncrementBreakLength.bind(this);
     this.onIncrementSessionLength = this.onIncrementSessionLength.bind(this);
@@ -21,6 +23,13 @@ class App extends React.Component {
     this.onSwitchToBreak = this.onSwitchToBreak.bind(this);
     this.onReset = this.onReset.bind(this);
     this.onSwitchToSession = this.onSwitchToSession.bind(this);
+    this.onBlockButtonsIfPlaying = this.onBlockButtonsIfPlaying.bind(this);
+  }
+
+  onBlockButtonsIfPlaying(value) {
+    this.setState({
+      isPlaying: value
+    })
   }
 
   onDecrementBreakLength() {
@@ -80,6 +89,7 @@ class App extends React.Component {
       <div className="App">
         <h2>Test</h2>
         <Timer
+          blockButtonsIfPlaying={this.onBlockButtonsIfPlaying}
           reset={this.onReset}
           switchToSession={this.onSwitchToSession}
           switchToBreak={this.onSwitchToBreak}
@@ -88,11 +98,13 @@ class App extends React.Component {
         />
         <section className="breakAndSessionBoxInApp">
           <Break
+            isPlaying={this.state.isPlaying}
             breakLength={this.state.breakLength}
             decrementBreakLength={this.onDecrementBreakLength}
             incrementBreakLength={this.onIncrementBreakLength}
           />
           <Session
+            isPlaying={this.state.isPlaying}
             sessionLength={this.state.sessionLength}
             decrementSessionLength={this.onDecrementSessionLength}
             incrementSessionLength={this.onIncrementSessionLength}

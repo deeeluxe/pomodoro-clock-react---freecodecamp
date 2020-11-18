@@ -10,6 +10,7 @@ class Timer extends React.Component {
       isBreak: false,
       isRunning: false,
     };
+
     this.handleClick = this.handleClick.bind(this);
     this.decrementTimer = this.decrementTimer.bind(this);
     this.reset = this.reset.bind(this);
@@ -22,6 +23,7 @@ class Timer extends React.Component {
         isRunning: true,
         intervalId: intervalId,
       });
+      this.props.blockButtonsIfPlaying(true);
     } else {
       clearInterval(this.state.intervalId);
 
@@ -73,6 +75,7 @@ class Timer extends React.Component {
     clearInterval(this.state.intervalId);
     this.audio.pause();
     this.audio.currentTime = 0;
+    this.props.blockButtonsIfPlaying(false);
   }
 
 

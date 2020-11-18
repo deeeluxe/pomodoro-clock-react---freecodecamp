@@ -24,11 +24,11 @@ function Session(props) {
     <section>
       <p id="session-label">Session Length</p>
       <div className="breakAndSessionBox">
-        <button id="session-decrement" onClick={decrementSessionLength}>
+        <button disabled={props.isPlaying ? "disabled" : ""} id="session-decrement" onClick={decrementSessionLength}>
           Down
         </button>
         <p id="session-length">{props.sessionLength}</p>
-        <button id="session-increment" onClick={incrementSessionLength}>
+        <button disabled={props.isPlaying ? "disabled" : ""} id="session-increment" onClick={incrementSessionLength}>
           Up
         </button>
       </div>
